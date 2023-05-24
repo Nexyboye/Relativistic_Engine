@@ -1,22 +1,26 @@
 import pygame
 import numpy
 
+# POSITION
+# 1 distance, 3 directions
 
-
-# character position relative to the origo:
-#   radius          between  -              0.d     0 - infinity
-#   time_angle      between t-x             1.d     0 - 2pi
-#   polar_angle     between x-y             2.d     0 - 2pi
-#   azimuthal_angle between y-z             3.d     0 - 2pi
-
+# POSITION CHANGE:
 # speed will be constant 1
+# 1 temporal 3 spatial directions
 
 
-position = np.array([300,300])
+# observer is the middle of the coord system
+# observer always stationary, world moves around it, it is only the middle of the display
+# observer is not defined at all in any way, this'll make the world infinite
+
+# distance from observer
+
+
 
 pygame.init()
 window = pygame.display.set_mode((600, 600))
 pygame.display.set_caption("Relativistic Engine")
+
 
 running = True
 while running:
@@ -26,5 +30,6 @@ while running:
 
     window.fill((255, 255, 255))
     pygame.display.flip()
+
 
 pygame.quit()
